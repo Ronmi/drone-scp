@@ -31,5 +31,5 @@ eval "scp -o 'StrictHostKeyChecking no' -r -i '${sshdir}/identity' ${PLUGIN_SRCG
 
 if [[ $PLUGIN_POSTEXEC != "" ]]
 then
-    eval "ssh -o 'StrictHostKeyChecking no' -r -i '${sshdir}/identity' '${PLUGIN_USER}@${PLUGIN_HOST}' $PLUGIN_POSTEXEC"
+    eval "ssh -o 'StrictHostKeyChecking no' -i '${sshdir}/identity' '${PLUGIN_USER}@${PLUGIN_HOST}' $PLUGIN_POSTEXEC"
 fi
